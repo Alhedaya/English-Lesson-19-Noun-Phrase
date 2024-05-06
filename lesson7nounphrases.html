@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lesson 19 - Noun Phrase </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<style>
+body{ background: linear-gradient(45deg, white, #D1E4C4, white); 
+height: 520vh; }
+.buttons{
+  background-color:#D1E4C4;
+  color: black; 
+  box-shadow:5px 0px 7px black;
+  border-radius:10px;
+  cursor: pointer;
+  margin-right:15px;
+  margin-top:10px;
+  font-size:30px;
+  transition: background-color 1s;
+  transition: color 1s;
+  width:210px;
+  height: 80px;  
+  border-width: 2px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  
+}
+.buttons:hover{
+background-color:#F1F7ED;
+color:black;
+box-shadow: 5px 0px 7px black;
+}
+.buttons:active{
+opacity: 0.7;
+}
+
+.buttons1{
+  background-color:#D1E4C4;
+  color: black; 
+  box-shadow:5px 0px 7px black;
+  border-radius:10px;
+  cursor: pointer;
+  margin-right:5px;
+  font-size:23px;
+  transition: background-color 1s;
+  transition: color 1s;
+  width:175px;
+  height: 80px;  
+  border-width: 2px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+  
+}
+.buttons1:hover{
+background-color:#F1F7ED;
+color:black;
+box-shadow: 5px 0px 7px black;
+}
+.buttons1:active{
+opacity: 0.7;
+}
+.tooltips{
+ position:relative;
+ display:block;
+ text-align:center;
+ font-size:70px;
+ font-weight:bold;
+ cursor:pointer;
+ 
+}
+.tooltips .tooltipstext{
+ visibility:hidden;
+ position:absolute;
+ z-index:1;
+ left:100px;
+ width:1100px;
+ top:125%;
+ background: #F1F7ED;
+ font-size:40px;
+ font-weight:normal;
+ padding: 5px;
+ border-radius: 6px;
+ box-shadow: 5px 0px 7px black;
+ text-align: center;
+ 
+}
+.tooltips:hover .tooltipstext{  visibility: visible;}
+
+
+.dropdown{ display: flex;}
+ .dropdown button{
+  background-color: #D1E4C4; color: black; padding: 10px 30px;
+  border:none; cursor:pointer; box-shadow: 5px 5px 7px black;
+  transition:0.05s; border-radius:4px;
+ }
+
+ .dropdown a{
+  display: flex; text-decoration: none; text-align: center; padding: 10px 23px; margin-top:10px; background-color: #D1E4C4;
+  color:black; box-shadow: 5px 5px 7px black; border-radius:4px; margin-left:5px;
+ }
+
+ .dropdown .content{
+   position: absolute; min-width:100px;
+  display:none;
+ }
+
+ .dropdown:hover .content{ 
+  display:flex;
+ }
+ .dropdown:hover button{
+  background-color: #F1F7ED; color:black;
+ }
+ .dropdown a:hover{
+  background-color: #F1F7ED; color:black;
+ }
+.p{ font-size: 30px; cursor:pointer;}
+.p1 { font-size: 40px; cursor:pointer;}
+
+.div1 {display: grid; grid-template-columns: 900px; justify-content: center; margin-top: 20px;}
+.div2 {display: grid; grid-template-columns: 900px; justify-content: center; margin-top: 20px;}
+.div3 {font-size: 30px;}
+.div4  {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr ; margin-bottom: 30px;}
+.div5 {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; margin-bottom: 30px;}
+.div6 {display: grid; grid-template-columns: 1fr 1fr;}
+.div7 {text-align: center; font-size: 40px;}
+.div8 {display: grid; grid-template-columns: 1fr 1fr 1fr;}
+.img {width:300px; height: 270px;}
+.img2 {width:300px; height: 270px; }
+
+@media screen and (max-width: 1000px){
+.p{ font-size: 25px;}
+.p1 {font-size: 25px;}
+
+.div1 {display: grid; grid-template-columns: 1fr;}
+.div2 {display: grid; grid-template-columns: 1fr;}
+.div3 {font-size: 25px;}
+.div4 {display: grid; grid-template-columns: 1fr;}
+.div5 {display: grid; grid-template-columns: 1fr;}
+.div6 {display: grid; grid-template-columns: 1fr;}
+.div7 {text-align: center; font-size: 30px;}
+.div8 {display: grid; grid-template-columns: 1fr ;}
+.wrapper { overflow-x: hidden; width: 100%; background: linear-gradient(45deg, white, #D1E4C4, white);}
+
+.img{width:150px; height: 135px;}
+.img2 {width:150px; height: 135px; }
+
+
+.tooltips{
+ position:relative;
+ display:block;
+ text-align:center;
+ font-size:30px;
+ font-weight:bold;
+ cursor:pointer;
+ 
+}
+.tooltips .tooltipstext{
+ visibility:hidden;
+ position:absolute;
+ z-index:1;
+ left:100px;
+ width:1100px;
+ top:125%;
+ background: #F1F7ED;
+ font-size:40px;
+ font-weight:normal;
+ padding: 5px;
+ border-radius: 6px;
+ box-shadow: 5px 0px 7px black;
+ 
+}
+.tooltips:hover .tooltipstext{  visibility: hidden;}
+
+.buttons{
+  background-color:#D1E4C4;
+  color: black; 
+  box-shadow:5px 0px 7px black;
+  border-radius:10px;
+  cursor: pointer;
+  margin-right:5px;
+  font-size:30px;
+  transition: background-color 1s;
+  transition: color 1s;
+  width:250px;
+  height: 80px;  
+  border-width: 2px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+  
+}
+.buttons:hover{
+background-color:#F1F7ED;
+color:black;
+box-shadow: 5px 0px 7px black;
+}
+.buttons:active{
+opacity: 0.7;
+}
+
+}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<h1 class="tooltips">  Noun phrases <span class="tooltipstext"></span> </h1> 
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color:#F1F7ED; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+
+Often a noun phrase is just a noun or a pronoun:<br><br>
+
+&bull; <b>People</b> like to have money.<br>
+&bull; <b>I</b> am tired.
+</div>
+</div>
+</div>
+
+<div  class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color:#D1E4C4; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<b>Premodifiers</b><br>
+But noun phrases can also include:<br><br>
+
+&bull; determiners:  &ensp;  <b>Those</b> houses are very expensive.<br><hr>
+&bull; quantifiers:   &emsp; I've lived in <b>a lot of</b> houses.<br><hr>
+&bull; numbers:    &emsp; &ensp;       My brother owns <b>two</b> houses.<br><hr>
+&bull; adjectives:    &emsp; &nbsp;    I love <b>old</b> houses.<br><hr><br>
+
+
+These parts of the noun phrase are called <b>premodifiers</b> because they go <b>before the noun</b>.<br><br>
+
+We use premodifiers in this order:<br><br>
+
+<div style=" display: grid; grid-template-columns: 1fr ; margin-bottom: 30px;">
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED;  margin: 10px;">determiners and quantifiers &rarr; numbers  &rarr; adjectives &rarr; <b>nouns</b></div>
+</div>
+</div>
+For example:<br><br>
+
+
+<div class="div4" style=" ">
+<div>
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px;">Determiners and quantifiers</div>
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px;">
+The <br> <hr>
+Our <br><hr>
+-<br><hr>
+These <br><hr>
+Some <br><hr>
+All those <br><hr>
+Their many <br>
+</div>
+</div>
+
+<div>
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px; padding-top: 44px;">Numbers</div>
+
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px;">
+Six <br> <hr>
+-<br><hr>
+Six<br><hr>
+Six <br><hr>
+ -<br><hr>
+Six <br><hr>
+-<br>
+</div>
+</div>
+
+<div>
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px; padding-top: 44px;">Adjectives</div>
+
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px;">
+-<br><hr> 
+young<br><hr>
+young<br><hr>
+young<br><hr>
+young <br><hr>
+young <br><hr>
+young<br>
+</div>
+</div>
+
+<div>
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px; padding-top: 44px;"><b>Nouns</b></div>
+
+<div style="text-align: center; font-size: 30px; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey; background-color:#F1F7ED; margin: 1px;">
+children<br><hr> 
+children<br><hr>
+children<br><hr>
+children<br><hr>
+children<br><hr>
+children<br><hr>
+children<br>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color:#F1F7ED; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<b>Postmodifiers</b><br>
+Other parts of a noun phrase go <b>after the noun</b>. These are called postmodifiers.<br>
+&middot; Postmodifiers can be:<br><br>
+
+prepositional phrases:<br><br>
+
+&bull; a man <b>with a gun</b><br>
+&bull; the boy <b>in the blue shirt</b><br>
+&bull; the house <b>on the corner</b><br><br>
+
+–ing phrases:<br><br>
+
+&bull; the man <b>standing over there</b><br>
+&bull; the boy <b>talking to Angela</b><br><br>
+
+relative clauses:<br><br>
+
+&bull; the man <b>we met yesterday</b><br>
+&bull; the house <b>that Jack built</b><br>
+&bull; the woman <b>who discovered radium</b><br>
+&bull; an eight-year-old boy <b>who attempted to rob a sweet shop</b><br><br>
+
+that clauses. These are very common after nouns like <b>idea, fact, belief, suggestion</b>:<br><br>
+
+&bull; He's still very fit, in spite of <b>the fact</b> that he's over eighty.<br>
+&bull; She got <b>the idea</b> that people didn't like her.<br>
+&bull; There was <b>a suggestion</b> that the children should be sent home.<br><br>
+
+to infinitives:<br><br>
+
+&bull; I've got no decent shoes <b>to wear</b>.<br><br>
+
+These are very common after <b>indefinite pronouns and adverbs</b>:<br><br>
+
+&bull; You should take <b>something to read</b>.<br>
+&bull; I need <b>somewhere to sleep</b>.<br><br>
+
+
+There may be <b>more than one</b> postmodifier:<br><br>
+
+&bull; an eight-year old boy <b>with a gun   who tried to rob a sweet shop</b><br>
+&bull; that girl <b>over there   in a green dress   drinking a Coke</b>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+<script>
+
+  var sound1 = new Audio();
+  sound1.src = "spectacles.mp3";
+
+  var sound2 = new Audio();
+  sound2.src = "pyjamas.mp3";
+
+  var sound3 = new Audio();
+  sound3.src = "tights.mp3";
+
+  var sound4 = new Audio();
+  sound4.src = "trousers.mp3";
+
+  var sound5 = new Audio();
+  sound5.src = "pants.mp3";
+
+  var sound6 = new Audio();
+  sound6.src = "jeans.mp3";
+
+  var sound7 = new Audio();
+  sound7.src = "shorts.mp3";
+
+  var sound8 = new Audio();
+  sound8.src = "boxers.mp3";
+
+  var sound9 = new Audio();
+  sound9.src = "knickers.mp3";
+
+  var sound10 = new Audio();
+  sound10.src = "pliers.mp3";
+
+  var sound11 = new Audio();
+  sound11.src = "scissors.mp3";
+
+  var sound12 = new Audio();
+  sound12.src = "binoculars.mp3";
+ 
+  var sound13 = new Audio();
+  sound13.src = "pincers.mp3";
+
+  var sound14 = new Audio();
+  sound14.src = "flock.mp3";
+
+  var sound15 = new Audio();
+  sound15.src = "herd.mp3";
+
+  var sound16 = new Audio();
+  sound16.src = "team.mp3";
+
+  var sound17 = new Audio();
+  sound17.src = "anitemof.mp3";
+
+  var sound18 = new Audio();
+  sound18.src = "itemsof.mp3";
+
+ 
+  var sound19 = new Audio();
+  sound19.src = "both.mp3";
+
+  var sound20 = new Audio();
+  sound20.src = "either.mp3";
+
+  var sound21 = new Audio();
+  sound21.src = "neither.mp3";
+
+  var sound22 = new Audio();
+  sound22.src = "afew.mp3";
+
+  var sound23 = new Audio();
+  sound23.src = "fewer.mp3";
+
+  var sound24 = new Audio();
+  sound24.src = "acoupleof.mp3";
+
+  var sound25 = new Audio();
+  sound25.src = "hundredsof.mp3";
+
+  var sound26 = new Audio();
+  sound26.src = "thousandsof.mp3";
+
+  var sound27 = new Audio();
+  sound27.src = "notmuch.mp3";
+
+  var sound28 = new Audio();
+  sound28.src = "abitof.mp3";
+
+  var sound29 = new Audio();
+  sound29.src = "alittle.mp3";
+
+  var sound30 = new Audio();
+  sound30.src = "agreatdealof.mp3";
+
+  var sound31 = new Audio();
+  sound31.src = "agooddealof.mp3";
+ 
+
+  
+
+
+</script>
+</body>
+</html>
